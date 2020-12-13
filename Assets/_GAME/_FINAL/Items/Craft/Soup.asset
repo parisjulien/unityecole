@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 258dc9c51b76d784abe512006afbef8c, type: 3}
+  m_Name: Soup
+  m_EditorClassIdentifier: 
+  m_CraftablItems:
+  - {fileID: 11400000, guid: b109228c844a6ed48af0ea1faf956005, type: 2}
+  - {fileID: 11400000, guid: a605117873edc524b9397b67f6dee44e, type: 2}
+  - {fileID: 11400000, guid: 1d3a715d59b9fcd4e8433064efbc87ec, type: 2}
+  - {fileID: 0}
+  m_Result: {fileID: 11400000, guid: 044aa25eccf302b449a9e15a513472ff, type: 2}

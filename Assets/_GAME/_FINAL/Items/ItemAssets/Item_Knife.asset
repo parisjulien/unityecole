@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf910341be824545a13bf28513ccd98, type: 3}
+  m_Name: Item_Knife
+  m_EditorClassIdentifier: 
+  m_ItemName: Knife
+  m_Description: 
+  m_Prefab: {fileID: 4916882565230299748, guid: c8c135650da57ee41815d76dcab6df09,
+    type: 3}
+  m_Eatable: 0
+  m_EffectsWhenEaten: []

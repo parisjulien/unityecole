@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class DialogueTrigger : MonoBehaviour
 {
 
@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(estAPortee == true)
+        if(estAPortee == true && Keyboard.current.eKey.wasPressedThisFrame)
         {
             TriggerDialogue();
         }
@@ -18,7 +18,8 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+
+        if (other.CompareTag("Player"))
         {
             estAPortee = true;
         }

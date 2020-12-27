@@ -40,8 +40,8 @@ namespace Final
             moveAction.performed += (ctx) => { m_MovementDirection = ctx.ReadValue<Vector2>(); };
             moveAction.canceled += (ctx) => { m_MovementDirection = Vector2.zero; };
 
-            InputAction fireAction = m_Controls.FindAction("Player/Fire");
-            fireAction.started += (ctx) => { Debug.Log("TODO: Player fire action"); };
+            //InputAction fireAction = m_Controls.FindAction("Player/Fire");
+            //fireAction.started += (ctx) => { Debug.Log("TODO: Player fire action"); };
         }
 
         private void OnEnable()

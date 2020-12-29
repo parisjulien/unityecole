@@ -20,7 +20,7 @@ public class JoueurVie : MonoBehaviour
 
     }
 
-    void Dommages(int nDegats)
+    public void Dommages(int nDegats)
     {
         PVCourant -= nDegats;
         BarreDeVie.SetPv(PVCourant);

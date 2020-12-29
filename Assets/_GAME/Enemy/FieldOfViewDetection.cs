@@ -23,7 +23,7 @@ public class FieldOfViewDetection : MonoBehaviour
     public LayerMask obstacleMask;
     
     [HideInInspector]
-    public List<Transform> visibleTargets = new List<Transform>();
+    public List<Transform> visibleTargets = new List<Transform>(); 
 
     private void Start()
     {
@@ -66,6 +66,9 @@ public class FieldOfViewDetection : MonoBehaviour
                 {
                     visibleTargets.Add(target);
                     Debug.Log("PLAYER DETECTED = ", target);
+                    JoueurVie joueurVie = target.GetComponent<JoueurVie>();
+                    joueurVie.Dommages(1);
+                    Destroy(gameObject);
                 }
             }
         }

@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 
 public class JoueurVie : MonoBehaviour
@@ -8,6 +9,10 @@ public class JoueurVie : MonoBehaviour
     public int PVCourant;
 
     public BarreDeVie BarreDeVie;
+
+    public Final.PlayerController playerController;
+
+    public Animator animator;
 
     void Start()
     {
@@ -24,6 +29,18 @@ public class JoueurVie : MonoBehaviour
     {
         PVCourant -= nDegats;
         BarreDeVie.SetPv(PVCourant);
+
+        if(PVCourant <= 0)
+        {
+            Mort();
+        }
     }
 
+    private void Mort()
+    {       
+        playerController.enabled = false;
+        playerController.m_MovementDirection = Vector2.zero;
+
+        GameOverManager.instance.OnJoueurMort();
+    }
 }

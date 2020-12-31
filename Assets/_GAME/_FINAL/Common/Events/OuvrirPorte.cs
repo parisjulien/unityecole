@@ -1,26 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-public class DialogueTrigger : MonoBehaviour
+
+public class OuvrirPorte : MonoBehaviour
 {
 
-    public Dialogue dialogue;
-
     public bool estAPortee;
+    public GameObject victoireUI;
     private Text interactUI;
-    // Update is called once per frame
 
     private void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("Interaction").GetComponent<Text>();
-    }
-
-    void Update()
-    {
-        if(estAPortee == true && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            TriggerDialogue();
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +26,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -42,8 +36,14 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    void TriggerDialogue()
+    void Update()
     {
-        DialogueManager.instance.CommencerDialogue(dialogue);
+        if (estAPortee == true && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            if(Inventaire.instance.nbCle == 3)
+            {
+                victoireUI.SetActive(true);
+            }
+        }
     }
 }

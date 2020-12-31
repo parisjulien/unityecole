@@ -22,7 +22,7 @@ namespace Final
         [SerializeField]
         private DirectionalMovement m_Movement = null;
 
-        private Vector2 m_MovementDirection = Vector2.zero;
+        public Vector2 m_MovementDirection = Vector2.zero;
 
         #endregion
 
